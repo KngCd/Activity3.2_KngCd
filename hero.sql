@@ -68,7 +68,6 @@ CREATE TABLE IF NOT EXISTS public.HeroItem
 );
 
 
--- Insert data into the Class table
 INSERT INTO Class (class_id, class_name, class_description)
 VALUES
     (101, 'Warrior', 'A strong and melee-focused class'),
@@ -82,7 +81,7 @@ VALUES
     (109, 'Tank', 'High durability and crowd control'),
     (110, 'Wizard', 'Masters of arcane magic');
 
--- Insert data into the Item table
+
 INSERT INTO Item (item_id, item_name, item_description, item_type)
 VALUES
     (101, 'Blade of Despair', 'Increases physical damage', 'Weapon'),
@@ -96,7 +95,7 @@ VALUES
     (109, 'Blade Armor', 'Reflects physical damage', 'Armor'),
     (110, 'Feather of Heaven', 'Increases attack speed', 'Weapon');
 
--- Insert data into the Hero table
+
 INSERT INTO Hero (hero_id, hero_name, class_id, is_active)
 VALUES
     (1, 'Aldous', 101, true),
@@ -110,7 +109,7 @@ VALUES
     (9, 'Leomord', 103, false),
     (10, 'Chou', 101, true);
 	
--- Insert data into the Player table
+
 INSERT INTO Player (player_id, player_name, player_level, player_experience, hero_id)
 VALUES
     (1, 'ShinmenTakezo', 10, 1000, 1),
@@ -124,7 +123,7 @@ VALUES
     (9, 'LeomordLegend', 13, 1600, 9),
     (10, 'ShinmenX', 6, 650, 10);
 	
--- Insert data into the Skills table
+
 INSERT INTO Skills (skill_id, skill_name, skill_description, class_id)
 VALUES
     (301, 'Groundbreaker', 'Powerful melee strike', 101),
@@ -138,16 +137,16 @@ VALUES
     (309, 'Iron Wall', 'High defense and protection', 109),
     (310, 'Arcane Burst', 'Unleashes arcane energy', 110);
 	
--- Insert data into the HeroItem table
+
 INSERT INTO HeroItem (hero_item_id, hero_id, item_id)
 VALUES
-    (1, 1, 101),  -- Aldous has Blade of Despair
-    (2, 2, 102),  -- Karina has Magic Shoes
-    (3, 3, 103),  -- Gusion has Bloodlust Axe
-    (4, 4, 104),  -- Layla has Demon Hunter Sword
-    (5, 5, 105),  -- Selena has Queen's Wings
-    (6, 6, 106),  -- Hayabusa has Endless Battle
-    (7, 7, 107),  -- Franco has Necklace of Durance
-    (8, 8, 108),  -- Fanny has Thunder Belt
-    (9, 9, 109),  -- Leomord has Blade Armor
-    (10, 10, 110);  -- Chou has Feather of Heaven
+    (1, 1, 101),  
+    (2, 2, 102),  
+    (3, 3, 103), 
+    (4, 4, 104),  
+    (5, 5, 105), 
+    (6, 6, 106),  
+    (7, 7, 107),  
+    (8, 8, 108), 
+    (9, 9, 109),  
+    (10, 10, 110); 
