@@ -155,3 +155,12 @@ VALUES
 -- Adding another column
 ALTER TABLE Item
 ADD item_price DECIMAL (10,2);
+
+-- Update the state of Hero 1 to inactive
+UPDATE hero
+set is_active = 'false'
+WHERE hero_id = 1;
+
+-- Deleting items associated with Hero 1
+DELETE FROM HeroItem 
+WHERE hero_id=1;
