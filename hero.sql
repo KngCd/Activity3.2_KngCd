@@ -151,16 +151,22 @@ VALUES
     (8, 8, 108),  -- Fanny has Thunder Belt
     (9, 9, 109),  -- Leomord has Blade Armor
     (10, 10, 110);  -- Chou has Feather of Heaven
-
+ 
 -- Adding another column
 ALTER TABLE Item
 ADD item_price DECIMAL (10,2);
 
 -- Update the state of Hero 1 to inactive
-UPDATE hero
-set is_active = 'false'
+UPDATE Hero
+SET is_active = 'false'
 WHERE hero_id = 1;
 
 -- Deleting items associated with Hero 1
 DELETE FROM HeroItem 
 WHERE hero_id=1;
+
+-- Selecting players and their heroes that are actively use
+SELECT Player.player_username, Hero.hero_name
+FROM Player
+JOIN Hero ON Player.hero_id = Hero.hero_id
+WHERE Hero.is_active = 'true';
