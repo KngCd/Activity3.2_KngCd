@@ -163,10 +163,15 @@ WHERE hero_id = 1;
 
 -- Deleting items associated with Hero 1
 DELETE FROM HeroItem 
-WHERE hero_id=1;
+WHERE hero_id = 1;
 
 -- Selecting players and their heroes that are actively use
 SELECT Player.player_username, Hero.hero_name
 FROM Player
 JOIN Hero ON Player.hero_id = Hero.hero_id
 WHERE Hero.is_active = 'true';
+
+-- List of hero/es classified as archers
+SELECT DISTINCT Hero.hero_name
+FROM Hero
+WHERE class_id IN (104,105);
