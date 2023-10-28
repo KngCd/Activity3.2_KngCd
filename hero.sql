@@ -175,3 +175,11 @@ WHERE Hero.is_active = 'true';
 SELECT DISTINCT Hero.hero_name
 FROM Hero
 WHERE class_id IN (104,105);
+
+-- Retrieving the Average Player Level on each class
+SELECT c.class_name, AVG(p.player_level) AS average_level
+FROM Player p
+JOIN Hero h ON p.hero_id = h.hero
+JOIN Class c ON h.class_id = c.class_id
+GROUP BY c.class_name
+ORDER BY average_level DESC;
