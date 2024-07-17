@@ -3,12 +3,36 @@ body{
     font-size: 2em;
 }
 
-#display{
+h1{
     display: block;
-    font: bold;
+    text-align: center;
 }
 
-.buttons{
+#display{
+    display: block;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+#container{
+    text-align: center;
+}
+
+.button{
+    padding: 10px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
     color: white;
     background-color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
